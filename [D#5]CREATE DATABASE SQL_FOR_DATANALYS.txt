@@ -1,0 +1,53 @@
+ --select *
+ --from SQL_FOR_DATANALYSIS.dbo.employee_info
+ --UNION
+ --select * 
+ --from SQL_FOR_DATANALYSIS.dbo.employeeinfo
+ --ORDER BY Employee_id 
+
+
+
+ --Update employeeinfo
+ --SET Employee_id = 1220
+ --WHERE First_name =  'Sawera'
+
+ select Employee_id,First_name,Age
+ from SQL_FOR_DATANALYSIS.dbo.employee_info
+ UNION 
+ select Employee_id,Jobtitle,Salary
+ from SQL_FOR_DATANALYSIS.dbo.Employee_salary
+
+
+SELECT First_name,Last_name,Jobtitle,Salary,
+CASE
+	WHEN Jobtitle = 'Data Analyst' THEN Salary + (Salary * .15)
+	WHEN Jobtitle = 'Salesman' THEN Salary + (Salary * .10)
+	WHEN Jobtitle = 'HR' THEN Salary + (Salary * .5)
+	ELSE Salary + (Salary * .3)
+END AS raised_salary
+from SQL_FOR_DATANALYSIS.dbo.employeeinfo
+FULL JOIN SQL_FOR_DATANALYSIS.dbo.employeesalary
+On employeeinfo.Employee_id = Employeesalary.Employee_id
+
+--select * from employeeinfo
+--select * from Employeesalary
+ 
+  SELECT Jobtitle,COUNT (Jobtitle)
+from SQL_FOR_DATANALYSIS.dbo.employeeinfo
+FULL JOIN SQL_FOR_DATANALYSIS.dbo.employeesalary
+On employeeinfo.Employee_id = Employeesalary.Employee_id
+GROUP BY Jobtitle 
+HAVING COUNT(Jobtitle) > 1
+ 
+
+select Jobtitle, COUNT(Jobtitle)
+from Employee_salary
+GROUP BY Jobtitle
+
+ SELECT Jobtitle,AVG (Salary)
+from SQL_FOR_DATANALYSIS.dbo.employeeinfo
+FULL JOIN SQL_FOR_DATANALYSIS.dbo.employeesalary
+On employeeinfo.Employee_id = Employeesalary.Employee_id
+GROUP BY Jobtitle 
+HAVING AVG (Salary) > 45000
+ORDER BY AVG (Salary)

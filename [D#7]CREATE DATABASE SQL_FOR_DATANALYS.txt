@@ -1,0 +1,26 @@
+
+-- partition by method
+
+SELECT First_name, Last_name, Gender, Salary,
+COUNT(Gender) over(partition by Gender) as total_gender,
+AVG(Salary) over (partition by Gender) as avgsalary
+FROM SQL_FOR_DATANALYSIS..employee_info em_info
+FULL JOIN SQL_FOR_DATANALYSIS..Employee_salary salr
+ON  em_info.Employee_id = salr.Employee_id
+WHERE Salary < '55000'
+ORDER BY Salary
+
+WITH CTE_Employee AS
+(SELECT First_name, Last_name, Gender, Salary,
+COUNT(Gender) over(partition by Gender) as total_gender,
+AVG(Salary) over (partition by Gender) as avgsalary
+FROM SQL_FOR_DATANALYSIS..employee_info em_info
+FULL JOIN SQL_FOR_DATANALYSIS..Employee_salary salr
+ON  em_info.Employee_id = salr.Employee_id
+WHERE Salary < '55000'
+ORDER BY Salary
+)
+SELECT * FROM CTE_Employee
+
+
+

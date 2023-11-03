@@ -1,0 +1,60 @@
+--SELECT * FROM employeeinfo
+
+---- Today i will be practicing "ORDER BY & GROUP BY"
+---- Fisrt i will try "DISTINCT"
+
+--SELECT DISTINCT(Gender)
+--FROM employeeinfo
+
+---- Now I will go to "GROUP BY"
+---- here GROUP BY applying on column Gender and this giving me two groups "male" & "female"
+--SELECT Gender
+--FROM employeeinfo
+--GROUP BY Gender
+
+---- here GROUP BY applying on column Age and this giving me 4 groups 20,21,22,23 respectively
+--SELECT Age
+--FROM employeeinfo
+--GROUP BY Age
+
+---- Using count in group by, that will give the number of objects in one group
+--SELECT Age, count(age)
+--FROM employeeinfo
+--GROUP BY Age
+
+----Now I am practicing "ORDER BY" 
+
+----"ORDER BY Age"
+--SELECT Age
+--FROM employeeinfo
+--GROUP BY Age
+--ORDER BY Age
+
+----"ORDER BY Gender" and using COUNT For counting
+--SELECT Gender, COUNT(Gender)
+--FROM employeeinfo
+--GROUP BY Gender
+--ORDER BY Gender
+
+----giving condition of < & > & = in "GROUP BY" & "ORDER BY"
+
+----for ">"
+--SELECT Age, COUNT(Age)
+--FROM employeeinfo
+--WHERE Age > 20
+--GROUP BY Age
+--ORDER BY Age
+
+----for "<"
+--SELECT Age, COUNT(Age)
+--FROM employeeinfo
+--WHERE Age < 22
+--GROUP BY Age
+--ORDER BY Age
+
+----this will give output in ascending order and also will give groups of different numbers
+--SELECT Gender,Age, COUNT(Age)
+--FROM employeeinfo
+--GROUP BY Age,Gender
+--ORDER BY Age,Gender
+

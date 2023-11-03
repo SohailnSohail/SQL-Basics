@@ -1,0 +1,55 @@
+/*
+Where statement
+=,<>,<,>,And,Or,	Like,Null,	Not Null,In
+*/
+
+--using equal = sign to find specific name
+--SELECT * 
+--FROM employeeinfo
+--WHERE First_name = 'Sohail'
+
+--using "<>" sign will give all name except "Sohail"
+--SELECT * 
+--FROM employeeinfo
+--WHERE First_name <> 'Sohail'
+
+--using less than sign "<"
+
+--SELECT * 
+--FROM employeeinfo
+--WHERE AGE < 21
+
+--USING > SIGN
+
+--SELECT * 
+--FROM employeeinfo
+--WHERE AGE > 21
+
+--Using "And" sign 
+--SELECT * 
+--FROM employeeinfo
+--WHERE AGE < 23 AND Age >20
+
+--Using "or" sign
+--SELECT * 
+--FROM employeeinfo
+--WHERE Employee_id = 12003 OR Last_name = 'malik'
+
+--using "like" in this
+
+--SELECT * 
+--FROM employeeinfo
+--WHERE First_name LIKE 'A%'
+
+
+--using "IN" here
+--SELECT * 
+--FROM employeeinfo
+--WHERE Last_name IN ('naz','malik')
+
+--using "Null" here
+--SELECT * 
+--FROM employeeinfo
+--WHERE Last_name =  null
+
+

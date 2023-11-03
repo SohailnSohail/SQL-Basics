@@ -1,0 +1,54 @@
+--CREATE TABLE employee_info
+--	(Employee_id int,
+--	First_name VARCHAR(50),
+--	Last_name VARCHAR(50),
+--	Age int,
+--	Gender VARCHAR(10)
+--	)
+
+	--CREATE TABLE Employee_salary
+	--(Employee_id int,
+	--Jobtitle VARCHAR(50),
+	--Salary int)
+
+	--INSERT INTO employee_info VALUES
+	--(1201,'Sohail','Rehman',20,'Male'),
+	--(1202,'Ahmad','khan',20,'Male'),
+	--(1210,'Shameer','Abas',22,'Male'),
+	--(1204,'Saif','Rehman',21,'Male'),
+	--(1202,'Saad','malik',20,'Male'),
+	--(1206,'Fahad','mustafa',20,'Male'),
+	--(1203,'Sadia','Saif',21,'female'),
+	--(1208,'Aysha','fatima',22,'female'),
+	--(1209,'Sawera','sadiq',23,'female')
+
+	
+	--INSERT INTO Employee_salary VALUES
+	--(1201,'Salesman', 45000),
+	--(1202,'Data Analyst', 55000),
+	--(1203,'Accountant', 65000),
+	--(1204,'Marketing Manager', 45000),
+	--(1205,'HR', 35000),
+	--(1206,'Receptionist', 25000),
+	--(1207,'Regional Manager', 75000),
+	--(1208,'Supplies relation', 85000),
+	--(1210,'Accountant', 95000)
+
+	SELECT * FROM employee_info
+	
+	SELECT * FROM employee_salary
+
+SELECT *
+from SQL_FOR_DATANALYSIS.dbo.employee_info
+RIGHT JOIN SQL_FOR_DATANALYSIS.dbo.Employee_salary
+ON employee_info.Employee_id = Employee_salary.Employee_id
+
+SELECT *
+from SQL_FOR_DATANALYSIS.dbo.employee_info
+RIGHT JOIN SQL_FOR_DATANALYSIS.dbo.Employee_salary
+ON employee_info.Employee_id = Employee_salary.Employee_id
+
+SELECT *
+from SQL_FOR_DATANALYSIS.dbo.employee_info
+LEFT JOIN SQL_FOR_DATANALYSIS.dbo.Employee_salary
+ON employee_info.Employee_id = Employee_salary.Employee_id

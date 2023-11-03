@@ -1,0 +1,63 @@
+
+SELECT * FROM Employeesalary
+create table #temp_employee (
+Employ_id int,
+job_title varchar(50),
+salary int)
+
+select* from #temp_employee
+
+insert into #temp_employee values(
+12,'data analyst',100000)
+
+insert into #temp_employee
+select *
+from SQL_FOR_DATANALYSIS..Employee_salary
+
+
+select * from employee_info
+create table #temp_employee2(
+employ_id int, 
+fname varchar (100),
+lname varchar (50),
+age int,
+gender varchar(10))
+
+select * 
+from #temp_employee2
+
+insert into #temp_employee2
+select * from  SQL_FOR_DATANALYSIS..employee_info
+
+select* from #temp_employee2
+
+SELECT * FROM #temp_employee2
+
+select * from employee_info
+create table #temp_employee3(
+employ_id int, 
+fname varchar (100),
+lname varchar (50),
+age int,
+gender varchar(10),
+avg_salary int)
+ 
+ select * from #temp_employee3
+
+ ---- stored procedure and Alter Procedure -----
+
+ CREATE PROCEDURE temp
+ AS
+ SELECT * FROM Employeesalary
+
+ EXEC temp
+
+ CREATE PROCEDURE temp2
+ as
+ SELECT * FROM employeeinfo
+
+ EXEC temp2
+ EXEC temp
+
+
+

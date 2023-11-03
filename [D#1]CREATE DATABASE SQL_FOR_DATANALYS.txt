@@ -1,0 +1,59 @@
+	--CREATE DATABASE SQL_FOR_DATANALYSIS
+
+
+	--CREATE TABLE employeeinfo
+	--(Employee_id int,
+	--First_name VARCHAR(50),
+	--Last_name VARCHAR(50),
+	--Age int,
+	--Gender VARCHAR(10)
+	--)
+
+	--CREATE TABLE Employeesalary
+	--(Employee_id int,
+	--Jobtitle VARCHAR(50),
+	--Salary int)
+
+	--INSERT INTO employeeinfo VALUES
+	--(12001,'Sohail','Rehman',20,'Male'),
+	--(12002,'Ali','Syed',20,'Male'),
+	--(12003,'Rehan','Nasir',22,'Male'),
+	--(12004,'Saif','Rehman',21,'Male'),
+	--(12005,'Saad','malik',20,'Male'),
+	--(12006,'Abubkar','Kareem',20,'Male'),
+	--(12007,'Sadia','Saif',21,'female'),
+	--(12008,'Anam','naz',22,'female'),
+	--(12009,'Sawera','sadiq',23,'female')
+
+	
+	--INSERT INTO Employeesalary VALUES
+	--(12001,'Salesman', 45000),
+	--(12002,'Data Analyst', 55000),
+	--(12003,'Accountant', 65000),
+	--(12004,'Marketing Manager', 45000),
+	--(12005,'HR', 35000),
+	--(12006,'Receptionist', 25000),
+	--(12007,'Regional Manager', 75000),
+	--(12008,'Supplies relation', 85000),
+	--(12009,'Accountant', 95000)
+
+	/* Select Statement 
+	*,Top,Distinct, Count, AS, Min, Max, Avg
+	*/
+	--SELECT *
+	--FROM Employeesalary
+
+	--SELECT COUNT(Gender)
+	--FROM employeeinfo 
+
+	--SELECT COUNT(Gender) AS Gender
+	--FROM employeeinfo 
+
+	--SELECT MAX(Salary)
+	--FROM Employeesalary
+
+	--SELECT MIN(Salary)
+	--FROM Employeesalary
+
+	--SELECT AVG(Salary)
+	--FROM Employeesalary

@@ -1,0 +1,62 @@
+
+--"here im practicing 'ALIAS'"
+--SELECT * FROM employeeinfo
+--Select  First_name + ' ' + Last_name as Fname
+--from [SQL_FOR_DATANALYSIS].[dbo].employeeinfo
+--SELECT * FROM employeeinfo
+
+--Select Gender as gender_groups
+--from [SQL_FOR_DATANALYSIS].[dbo].employeeinfo
+--Group By Gender
+
+--Select Age as DESC_age
+--from [SQL_FOR_DATANALYSIS].[dbo].employeeinfo
+--ORDER BY Age DESC
+
+--Select Salary as ASC_age
+--from [SQL_FOR_DATANALYSIS].[dbo].Employeesalary
+--ORDER BY Salary 
+
+--Select Salary as DESC_age
+--from [SQL_FOR_DATANALYSIS].[dbo].Employeesalary
+--ORDER BY Salary DESC
+
+
+--Select Salary as DESC_age
+--from [SQL_FOR_DATANALYSIS].[dbo].Employeesalary
+--ORDER BY Salary DESC
+
+--SELECT  info.Employee_id, salary.Salary
+--FROM [SQL_FOR_DATANALYSIS].[dbo].[employee_info] as info
+--JOIN [SQL_FOR_DATANALYSIS].[dbo].[Employee_salary] as salary
+--ON info.Employee_id = salary.Employee_id
+
+--SELECT*
+--from employeeinfo
+
+--SELECT Gender,Salary,
+--COUNT(Gender) OVER (Partition by Gender) as totalgender
+--FROM SQL_FOR_DATANALYSIS..employeeinfo e_info
+--Full JOIN SQL_FOR_DATANALYSIS..Employeesalary sal
+--ON e_info.Employee_id = sal.Employee_id
+
+--SELECT First_name, Last_name, Gender, Salary,
+--COUNT(Gender) over(partition by Gender) as total_gender
+--FROM SQL_FOR_DATANALYSIS..employee_info em_info
+--FULL JOIN SQL_FOR_DATANALYSIS..Employee_salary salr
+--ON  em_info.Employee_id = salr.Employee_id
+
+--Select First_name + ' ' + Last_name as full_name
+--from SQL_FOR_DATANALYSIS.dbo.employee_info
+
+--select Gender, COUNT(Gender)
+--from SQL_FOR_DATANALYSIS.dbo.employeeinfo
+--GROUP BY Gender
+
+--select Age,
+--CASE
+--	WHEN Age > 20 then 'Can go to study abroad'
+--	WHEN Age < 20 then 'Can not go to study abroad'
+--	ELSE 'Invalid'
+--END as Criteria
+--from SQL_FOR_DATANALYSIS.dbo.employee_info 
